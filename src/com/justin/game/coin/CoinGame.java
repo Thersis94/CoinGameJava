@@ -1,7 +1,8 @@
+package com.justin.game.coin;
 /****************************************************************************
  * <b>Title</b>: CoinGame.java
  * <b>Project</b>: CoinGameJava
- * <b>Description: </b> CHANGE ME!!
+ * <b>Description: </b> Number Guessing Game!
  * <b>Copyright:</b> Copyright (c) 2020
  * <b>Company:</b> Silicon Mountain Technologies
  * 
@@ -62,6 +63,84 @@ public class CoinGame {
 		 * If the user selects quit then the application will shutdown
 		 */
 
+	}
+	
+	/**
+	 * Dont forget to add Javadocs
+	 */
+	public static void configureApp() {
+		//Create storage object. What is the correct way to do this in JAVA?
+		
+		
+	}
+	
+	public static void initialieApp() {
+		//Make a connection with the user Interface. What is the best way to do this in JAVA? Should this just be a System.out.println() method that spits out stored messages?
+		
+		
+		//Make a connection with the user input device. What is he proper way to do this in JAVA? Does JAVA come with a pre-build console input system?
+		
+		
+	}
+	
+	public static void initializeGame() {
+		//Display welcome message
+		
+		
+		//Display game rules
+		
+		
+		//Prompt user for the number of players
+		
+		
+		//Prompt user for a number range
+		
+		
+		//Generate random number
+		
+		
+	}
+	
+	public static void startGame() {
+		//Display game is starting message
+		
+		
+		//HandleGuesses
+		
+		
+	}
+	
+	public static void handleGuesses() {
+		//Prompt user for a guess
+		
+		
+		//Check guess
+		
+		
+		//Display the result of the guess and the guess number
+		
+		
+		//If the guess is incorrect run handleGuesses
+		
+		
+		//If the guess is correct run handleCorrectGuess
+		
+		
+	}
+	
+	public static void handleCorrectGuesses() {
+		//Display congratulations message with guess number
+		
+		
+		//prompt user to either start a new game or quit
+		
+		
+	}
+	
+	public static void shutdownApplication() {
+		//Close application
+		
+		
 	}
 
 }
