@@ -13,76 +13,50 @@ package com.justin.game.coin;
  ****************************************************************************/
 public class CoinGame {
 
+	/**
+	 * Main method called to allow command line processing
+	 * @param args
+	 */
 	public static void main(String[] args) {
+		//Run configureApp
 		
-		/*App Config
-		 * This will create a storage object that will hold starting values
-		 */
 		
-		/*Initialize App
-		 * This will initialize the application and make any necessary connections(For instance if a database connection was needed to show high scores)
-		 * It will then store necessary information in the storage object
-		 */
+		//Run initializeApp
 		
-		/*Initialize Game
-		 * The user is prompted with the rules
-		 * 
-		 * The user is prompted to select a number range
-		 * The number range that they select is stored
-		 * 
-		 * The user is prompted to select the number of players
-		 * The number of players that they select is stored
-		 * 
-		 * A random number is generated using the range selected by the user
-		 * The random number is stored
-		 */
 		
-		/*Start Game
-		 * A message is displayed stating that the game is starting
-		 */
+		//Run inializeGame
 		
-		/*Make Guess
-		 * The user will be prompted to make a guess
-		 * 
-		 * The guess counter will increase by one
-		 * 
-		 * If the user guess is too high/low then a correlating message is displayed
-		 * 	The the make a guess prompt will display
-		 * 
-		 * If the user is correct then a message will display with their game information (Number of guesses)
-		 * 	The user will be prompted to either play again or to shut down the application
-		 * 
-		 * At this point the players score would be sent to the database
-		 */
 		
-		/*Play Again
-		 * If play again is chosen then the application state will return to Initialize App
-		 */
-		
-		/*Shutdown Application
-		 * If the user selects quit then the application will shutdown
-		 */
-
 	}
 	
 	/**
-	 * Dont forget to add Javadocs
+	 * Initializes a new instance of a HashMap for key/value storage
 	 */
 	public static void configureApp() {
-		//Create storage object. What is the correct way to do this in JAVA?
+		//Initialize a new instance of a HashMap
+		
 		
 		
 	}
 	
+	/**
+	 * Initializes the application to confirm that the user is able to receive and input information
+	 */
 	public static void initialieApp() {
-		//Make a connection with the user Interface. What is the best way to do this in JAVA? Should this just be a System.out.println() method that spits out stored messages?
+		//Run display method with a splash screen of some kind
 		
 		
-		//Make a connection with the user input device. What is he proper way to do this in JAVA? Does JAVA come with a pre-build console input system?
+		//Run display method with user input and a prompt for the user to start the game
+		
+		
+		//Put default values in HashMap
 		
 		
 	}
 	
+	/**
+	 * Displays game guidelines a collects game parameters from the user
+	 */
 	public static void initializeGame() {
 		//Display welcome message
 		
@@ -101,6 +75,9 @@ public class CoinGame {
 		
 	}
 	
+	/**
+	 * Displays starting message and initiates the guessing portion of the game
+	 */
 	public static void startGame() {
 		//Display game is starting message
 		
@@ -110,11 +87,17 @@ public class CoinGame {
 		
 	}
 	
+	/**
+	 * Handles prompting user for guesses and responding based on the users input. Will loop itself until the user guesses correctly
+	 */
 	public static void handleGuesses() {
 		//Prompt user for a guess
 		
 		
 		//Check guess
+		
+		
+		//Guess count increase by one
 		
 		
 		//Display the result of the guess and the guess number
@@ -128,18 +111,57 @@ public class CoinGame {
 		
 	}
 	
+	/**
+	 * Displays a congratulations message and prompts user to either play again or quit playing
+	 */
 	public static void handleCorrectGuesses() {
 		//Display congratulations message with guess number
 		
 		
-		//prompt user to either start a new game or quit
+		//Prompt user to either start a new game or quit
+		
+		
+		
+		//If user selects start a new game run initializeApp
+		
+		
+		
+		//If user select Quit run shutdownApplication
+	}
+	
+	/**
+	 * Closes the application
+	 */
+	public static void shutdownApplication() {
+		//Close application
 		
 		
 	}
 	
-	public static void shutdownApplication() {
-		//Close application
+	/**
+	 * Handles the displaying of messages to the user and the collection of user input
+	 * 
+	 * Receives String containing the message and if applicable the userInput type
+	 * @param args
+	 */
+	public static void display(String[] args) {
+		//Display message to user
 		
+		
+		//If user input is requested then run collectUserInput
+		
+		
+	}
+	
+	/**
+	 * Handles collecting information from the user
+	 * 
+	 * Receives String containing the expected type of user input
+	 * 
+	 * @param args
+	 */
+	public static void collectUserInput(String[] args) {
+		//Run user input method. Buffered Reader? Scanner Class?
 		
 	}
 
