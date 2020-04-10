@@ -1,4 +1,8 @@
 package com.justin.game.coin;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
 /****************************************************************************
  * <b>Title</b>: CoinGame.java
  * <b>Project</b>: CoinGameJava
@@ -12,29 +16,41 @@ package com.justin.game.coin;
  * @updates:
  ****************************************************************************/
 public class CoinGame {
+	
+	HashMap<String, String> map = new HashMap<>();
 
 	/**
 	 * Main method called to allow command line processing
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//Run configureApp
+		CoinGame cg = new CoinGame();
+				cg.process();
+				
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Enter username");
+		String userName = userInput.nextLine();
+		System.out.println(userName);
+	}
+	
+	public void process() {
+		configureApp();
 		
+		initializeApp();
 		
-		//Run initializeApp
+		initializeGame();
 		
-		
-		//Run inializeGame
-		
+		startGame();
 		
 	}
 	
 	/**
-	 * Initializes a new instance of a HashMap for key/value storage
+	 * Setting the initial game values
 	 */
-	public static void configureApp() {
-		//Initialize a new instance of a HashMap
+	public void configureApp() {
+		//Fill hashMap with initial messages
 		
+		map.put("Welcome", "Hello! And wellcome to my number guessings game.");
 		
 		
 	}
@@ -42,9 +58,11 @@ public class CoinGame {
 	/**
 	 * Initializes the application to confirm that the user is able to receive and input information
 	 */
-	public static void initialieApp() {
-		//Run display method with a splash screen of some kind
+	public void initializeApp() {
 		
+		display("Welcome", false);
+		
+		//Collect the userName and store it in the hashMap
 		
 		//Run display method with user input and a prompt for the user to start the game
 		
@@ -57,7 +75,7 @@ public class CoinGame {
 	/**
 	 * Displays game guidelines a collects game parameters from the user
 	 */
-	public static void initializeGame() {
+	public void initializeGame() {
 		//Display welcome message
 		
 		
@@ -65,6 +83,8 @@ public class CoinGame {
 		
 		
 		//Prompt user for the number of players
+		
+		//Prompt for player names
 		
 		
 		//Prompt user for a number range
@@ -78,7 +98,7 @@ public class CoinGame {
 	/**
 	 * Displays starting message and initiates the guessing portion of the game
 	 */
-	public static void startGame() {
+	public void startGame() {
 		//Display game is starting message
 		
 		
@@ -90,7 +110,7 @@ public class CoinGame {
 	/**
 	 * Handles prompting user for guesses and responding based on the users input. Will loop itself until the user guesses correctly
 	 */
-	public static void handleGuesses() {
+	public void handleGuesses() {
 		//Prompt user for a guess
 		
 		
@@ -114,7 +134,7 @@ public class CoinGame {
 	/**
 	 * Displays a congratulations message and prompts user to either play again or quit playing
 	 */
-	public static void handleCorrectGuesses() {
+	public void handleCorrectGuesses() {
 		//Display congratulations message with guess number
 		
 		
@@ -132,7 +152,7 @@ public class CoinGame {
 	/**
 	 * Closes the application
 	 */
-	public static void shutdownApplication() {
+	public void shutdownApplication() {
 		//Close application
 		
 		
@@ -144,11 +164,15 @@ public class CoinGame {
 	 * Receives String containing the message and if applicable the userInput type
 	 * @param args
 	 */
-	public static void display(String[] args) {
+	public void display(String message, boolean args2) {
 		//Display message to user
-		
+		System.out.println(map.get(message));
 		
 		//If user input is requested then run collectUserInput
+		if(args2) {
+			//capture the return from collectUserInput
+			collectUserInput();
+		}
 		
 		
 	}
@@ -160,8 +184,8 @@ public class CoinGame {
 	 * 
 	 * @param args
 	 */
-	public static void collectUserInput(String[] args) {
-		//Run user input method. Buffered Reader? Scanner Class?
+	public void collectUserInput() {
+		//Run user input method. Scanner Class will return a string. Parse it as an integer where needed
 		
 	}
 
